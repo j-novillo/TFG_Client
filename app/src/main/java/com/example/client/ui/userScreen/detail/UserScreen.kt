@@ -368,7 +368,7 @@ fun TabButton(
 }
 
 
-@Preview(name = "Portrait Mode", showBackground = true, device = Devices.PHONE)
+@Preview(name = "Portrait Mode", showBackground = true, device = "spec:width=411dp,height=891dp")
 @Composable
 fun Preview() {
     UserContent(

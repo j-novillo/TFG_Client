@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.jetbrainsKotlinSerialization)
-    alias(libs.plugins.kapt)
     alias(libs.plugins.hilt)
     alias(libs.plugins.room)
     alias(libs.plugins.ksp)
@@ -30,7 +29,7 @@ android {
     productFlavors {
         create("development") {
             dimension = "env"
-            buildConfigField("String", "API_URL", "\"http://192.168.0.86:8080/\"")
+            buildConfigField("String", "API_URL", "\"http://192.168.1.108:8080/\"")
             buildConfigField("String","GOOGLE_PLACES_API_KEY","\"AIzaSyDkxAbEuZkmyNA1wT1rKqT3L5pwJHUAEqQ\"")
         }
         create("production") {
@@ -125,11 +124,10 @@ dependencies {
     implementation(libs.firebase.messaging.ktx)
 
 
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
 
     //Room
     implementation(libs.androidx.room.runtime)
-    annotationProcessor(libs.androidx.room.compiler)
     // To use Kotlin Symbol Processing (KSP)
     ksp(libs.androidx.room.compiler)
     // optional - Kotlin Extensions and Coroutines support for Room

@@ -1,5 +1,5 @@
 [versions]
-agp = "8.6.1"
+agp = "8.13.1"
 datastorePreferences = "1.1.2"
 kotlin = "1.9.24"
 coreKtx = "1.15.0"
@@ -107,8 +107,8 @@ firebase-crashlytics = {module = "com.google.firebase:firebase-crashlytics" }
 firebase-storage = { module = "com.google.firebase:firebase-storage-ktx" }
 firebase-auth = {module = "com.google.firebase:firebase-auth-ktx" }
 androidx-biometric-ktx = { group = "androidx.biometric", name = "biometric-ktx", version.ref = "biometricKtx" }
-androidx-security-crypto-ktx = { group = "androidx.security", name = "security-crypto-ktx", version.ref = "securityCryptoKtx" }
-androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
+    androidx-security-crypto-ktx = { group = "androidx.security", name = "security-crypto-ktx", version.ref = "securityCryptoKtx" }
+    androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
 #Coroutines
@@ -124,7 +124,6 @@ androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrainsKotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 room = { id="androidx.room", version.ref = "roomRuntime" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
 crashlytics = {id= "com.google.firebase.crashlytics", version.ref = "crashlytics"}
