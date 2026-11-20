@@ -1,146 +1,132 @@
-# 🌟 NOMADA - Android Client ✨
-
 <div align="center">
 
-<img src="https://github.com/jorjitoNM/TFG_Client/blob/main/app/src/main/res/drawable/app_logo_v1.png" alt="NOMADA Logo" width="200"/>
+<img src="app/src/main/res/drawable/app_logo_v1.png" alt="NOMADA logo" width="180"/>
 
-### 🗺️ *Discover. Create. Share. Explore.* 🌍
+# NOMADA · Android App
 
-*A location-based social note-taking experience that brings your memories to life!*
+*Discover, create, share and explore: social notes tied to real places.*
+
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-4285F4?logo=jetpackcompose&logoColor=white)
+![Hilt](https://img.shields.io/badge/Hilt-DI-34A853)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black)
+![Google Maps](https://img.shields.io/badge/Google_Maps-4285F4?logo=googlemaps&logoColor=white)
 
 </div>
 
----
-
-## 🚀 What is NOMADA?
-
-#### Nomada is a **revolutionary** 📱 location-based note-taking Android application that transforms how you capture and share experiences!
-#### Create notes tied to specific places, discover hidden gems from other users, and build a social network around real-world locations! 🌟
----
-
-## ✨ Amazing Features
-
-### 🔐 **Secure Authentication System**
-- 🆔 **Smart Registration & Login** with real-time validation
-- 👆 **Biometric Authentication** - Login with your fingerprint!
-- 🔒 **Military-grade Security** with encrypted credential storage
-- 🎨 **Beautiful UI** with custom themes and animations
-
-### 📝 **Rich Note Management**
-
-Create different types of notes with unique icons for each category:
-
-<div align="center">
-
-| Note Type | Description |
-|-----------|------------|
-| **Classic** 📖 | Everyday thoughts |
-| **Event** 🎉 | Special occasions and events |
-| **Historical** 🏛️| Cultural heritage sites |
-| **Food** 🍕 | Culinary adventures and reviews |
-| **Landscape** 🏔️ | Breathtaking natural landscapes |
-| **Cultural** 🎭 | Art, museums, and cultural experiences |
-
-</div>
-
-- 🔒 **Privacy Controls** - Public or Private
-- ⭐ **Rating System** - Rate your experiences from 1–10
-- 📍 **GPS Integration** - Automatic location tagging
-
-### 🗺️ **Interactive Map Experience**
-- 🌍 **Google Maps Integration** with custom markers
-- 🔍 **Smart Location Search** - Find any place in the world
-- 📍 **Real-time GPS** - Always know where you are
-- 🎨 **Dark/Light Mode** support for comfortable viewing
-- 🏷️ **Filter by Note Type** - Find exactly what you're looking for
-
-<div align="center">
-<em>Special marker for locations with multiple notes in the same latitude and longitude</em>
-</div>
-
-### 👥 **Social Features**
-- 👤 **User Profiles** - Showcase your adventures
-- 🔍 **User Discovery** - Find and connect with fellow explorers
-- 👍 **Like & Favorite System** - Show appreciation for great content
-- 🌐 **Social Interactions** - Engage with the community
+> **Final Degree Project (TFG)** of the Higher Vocational Training Program in Cross-Platform
+> Application Development (DAM), IES Francisco de Quevedo, Madrid, 2024‑2025.
+> **Collaborative project** by a team of 5, organized with **Scrum**.
+>
+> This repository contains the **Android app**. The backend (REST API built with Spring Boot) lives in
+> **[TFG_Server](https://github.com/j-novillo/TFG_Server)**.
 
 ---
 
-## 🛠️ **Cutting-Edge Technology Stack**
+## What is NOMADA?
 
-### 🏗️ **Architecture**
-- 🎯 **MVVM Pattern** - Clean, maintainable code structure
-- 🧩 **Jetpack Compose** - Modern, declarative UI framework
-- 🏛️ **Clean Architecture** - Separation of concerns done right
+NOMADA is a **social network of geolocated notes**. Users can leave notes pinned to a spot on the
+map (a restaurant, a landscape, a monument, an event…), rate them, add photos, decide who can see
+them and discover what other people have left around them.
 
-### 📦 **Dependencies & Libraries**
-- 💉 **Hilt** - Dependency injection made simple
-- 🧭 **Compose Navigation** - Smooth screen transitions
-- 🌐 **Retrofit + OkHttp** - Robust API communication
-- 💾 **Room + DataStore** - Efficient local storage
-- 🔥 **Firebase** - Crashlytics and Firestore integration
-- 🖼️ **Coil** - Lightning-fast image loading
+The idea starts from a question: *what if people's memories and recommendations were tied to the
+place where they happened?* The app combines an interactive map with social features (profiles,
+followers, likes and saved notes) to answer it.
 
----
-
-## 🚀 **Quick Start Guide**
-
-### 📋 **Prerequisites**
-- 🤖 **Android Studio** Arctic Fox or later
-- 📱 **Android SDK 35**
-- 🗺️ **Google Maps API Key** (we'll help you set it up!)
-
-### ⚙️ **Build Configuration**
-
-🌍 **Two Environments Available:**
-- 🔧 **Development**: `http://localhost:8080/`
-- 🌐 **Production**: `https://informatica.iesquevedo.es/nomada/`
-
-📱 **Device Requirements:**
-- **Minimum SDK**: Android 8.0 (API 26)
-- **Target SDK**: Android 35
-- **Compile SDK**: 35
-
-### 🎯 **Installation Steps**
-
-1. 📥 **Clone the repository**
-   ```bash
-   git clone https://github.com/jorjitoNM/TFG_Client.git
-   ```
-
-2. 🔧 **Open in Android Studio**
-
-3. 🗺️ **Configure Google Maps API Key**
-    - Get your API key from Google Cloud Console
-    - Add it to your `AndroidManifest.xml`
-
-4. 🎛️ **Select Build Variant**
-    - Choose `development` for local testing
-    - Choose `production` for release builds
-
-5. ▶️ **Build and Run!**
-
----
-
-## 📱 **App Structure & Flow**
-
-### 🎬 **User Journey**
 ```
-🌟 Splash Screen → 🚪 Start Screen → 🔐 Authentication → 🏠 Main App
-                                                        ↓
-                    🗺️ Map View ← → 📝 Notes List ← → 👤 Profile ← → 🔍 Search
+┌─────────────────────────┐   HTTPS + JWT   ┌──────────────────────────┐      ┌─────────┐
+│  Android app            │ ──────────────► │  REST API (Spring Boot)  │ ───► │  MySQL  │
+│  this repository        │ ◄────────────── │  TFG_Server              │      └─────────┘
+└──────────┬──────────────┘      JSON       └──────────────────────────┘
+           │
+           ▼
+   Firebase (Auth, Storage, Crashlytics, Messaging) · Google Maps / Places
 ```
 
-### 🏗️ **Main Components**
-- 🎬 **MainActivity** - App entry point with splash integration
-- 🧭 **Navigation System** - Seamless screen transitions
-- 💉 **Hilt Application** - Dependency injection setup
+## Features
 
----
+**Account and security**
+- Sign-up with real-time validation and **email verification** (handled by the server).
+- Login with **JWT** and **automatic session renewal** (OkHttp interceptor and authenticator).
+- **Fingerprint login** (Biometric API), with credentials stored encrypted in the
+  Android Keystore (Security Crypto).
 
-## 🔒 **Security Features**
+**Notes**
+- Six note types, each with its own icon: *classic, event, historical, food, landscape and cultural*.
+- Per-note privacy (**public, followers only or private**), 1‑to‑10 rating, automatic GPS
+  geolocation and **photos** stored in Firebase Storage.
 
-- 👆 **Biometric Authentication** - Your device, your security
-- 🔐 **Encrypted Storage** - Your data stays safe
-- 🌐 **HTTPS Communication** - Secure API connections
-- 🛡️ **Android Keystore** - Hardware-backed security
+**Map**
+- **Google Maps** with custom markers by note type and a special marker when several notes
+  share the same location.
+- Place search (Google Places), filters by type and light or dark map style.
+
+**Social**
+- Profiles with a picture, user search, follow and unfollow.
+- Likes and saved notes, with sortable and filterable lists.
+- **Dark / light mode** across the whole app.
+
+## Architecture
+
+**Clean Architecture + MVVM**, with the UI built entirely in **Jetpack Compose**:
+
+```
+app/src/main/java/com/example/client
+├── ui/                 # Compose screens + ViewModels (one package per screen)
+│   ├── splashScreen, startScreen, login, registerScreen
+│   ├── noteMap/        Map, place search, list of notes at a location
+│   ├── normalNoteScreen/, addNoteScreen/
+│   ├── userScreen/     Own profile, visitor profile, user search
+│   ├── navigation/     Navigation Compose with typed destinations
+│   └── theme/          Material 3, light and dark theme
+├── domain/
+│   ├── model/          Domain models (Note, Event, User...)
+│   └── usecases/       One use case per action (authentication, notes, social, map, images...)
+├── data/
+│   ├── remote/         Retrofit: services, data sources and security (tokens, interceptors)
+│   ├── local/          Room (user and location) and DataStore
+│   ├── firebase/       Firebase Auth
+│   └── repositories/   Single source of truth for the domain
+└── di/                 Hilt modules
+```
+
+- Screen state is exposed from the ViewModels with **StateFlow** and collected in Compose.
+- Network and database calls are modeled as `Flow<NetworkResult<T>>`
+  (Loading / Success / Error) and run on injected dispatchers.
+- Two **build flavors**: `development` (local API) and `production` (deployed API).
+
+## Tech stack
+
+| Area | Technologies |
+|---|---|
+| Language and UI | Kotlin, Jetpack Compose, Material 3, Navigation Compose, SplashScreen API |
+| Architecture | MVVM, Clean Architecture, Hilt, Coroutines + Flow |
+| Networking | Retrofit, OkHttp (logging, interceptors and an authenticator to refresh the JWT), Gson |
+| Local persistence | Room, DataStore |
+| Maps | Google Maps Compose, Play Services Location, Google Places API, Accompanist Permissions |
+| Firebase | Auth, Storage, Firestore, Crashlytics, Cloud Messaging |
+| Security | Biometric API, AndroidX Security Crypto |
+| Images | Coil |
+
+## How to run it
+
+Requirements: a recent Android Studio, **SDK 35** (minimum Android 8.0, API 26), a
+**Google Maps / Places** key and a Firebase `google-services.json`.
+
+1. Clone the repository and open it in Android Studio.
+2. Set your Google Maps key in `AndroidManifest.xml` and your Places key in `app/build.gradle.kts`.
+3. Choose the *build variant*:
+   - `development`: points to a local server (adjust the IP in `build.gradle.kts`).
+   - `production`: points to the deployed API.
+4. Start the backend ([TFG_Server](https://github.com/j-novillo/TFG_Server)) if you use `development`.
+5. Run the app.
+
+## Team and methodology
+
+Built by **Jorge Novillo**, **Adrián Saavedra**, **Marcos Sánchez**, **Mario Valiente** and
+**Aitor García**, following **Scrum** (user-story backlog, sprints, planning, reviews and
+retrospectives, managed in Taiga) and a **GitFlow** workflow with feature branches and
+Pull Requests reviewed by the team (more than 40 PRs in this repository alone).
+
+**[docs/METHODOLOGY.md](docs/METHODOLOGY.md)** explains how we organized ourselves and what each
+person worked on.
